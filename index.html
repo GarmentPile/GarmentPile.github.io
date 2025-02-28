@@ -131,7 +131,7 @@
                   <span>Paper(Coming Soon)</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://garmentpile.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -139,7 +139,7 @@
                   </span>
                   <span>arXiv(Coming Soon)</span>
                 </a>
-              </span>
+              </span> -->
 
               <!-- <span class="link-block">
                 <a href="https://et-seed.github.io"
@@ -195,7 +195,7 @@
       <p>
         <b>Point-Level Affordance for Cluttered Garments.</b> A higher score denotes the higher actionability for downstream retrieval.
         <b>Row 1</b>: per-point affordance simultaneously reveals 2 garments suitable for retrieval.
-        <b>Row 1</b>: it is aware of garment structures (grasping edges leads other parts contacting floor) and relations (retrieving one garment while dragging nearby entangled garments out), and thus avoids manipulating on points leading to such failures.
+        <b>Row 2</b>: it is aware of garment structures (grasping edges leads other parts contacting floor) and relations (retrieving one garment while dragging nearby entangled garments out), and thus avoids manipulating on points leading to such failures.
         <b>Row 3 and 4</b>: 
         highly tangled garments may not have
         plausible manipulation points,
@@ -273,17 +273,11 @@
         <hr style="margin-top:0px">
         <div class="content has-text-justified">
           <p>
-            Imitation learning, e.g., diffusion policy, has proven effective in various robotic manipulation tasks. 
-            However, extensive demonstrations are required for policy robustness and generalization. 
-            To reduce the demonstration reliance, we leverage spatial symmetry and propose ET-SEED, an efficient 
-            trajectory-level SE(3) equivariant diffusion model for proposing action sequences in complex robot manipulation tasks. 
-            Further, previous equivariant diffusion models require the per-step equivariance in the Markov process, 
-            making it difficult to learn policy under such strong constraints. We theoretically extend equivariant
-            Markov kernels and simplify the condition of equivariant diffusion process, thereby significantly
-            improving training efficiency for trajectory-level SE(3) equivariant diffusion policy in an end-to-end manner. 
-            We evaluate ET-SEED on representative robotic manipulation tasks, involving rigid body, articulated and deformable object. 
-            Experiments demonstrate superior data efficiency and manipulation proficiency of our proposed method, 
-            as well as its ability to generalize to unseen configurations with only a few demonstrations. 
+            Cluttered garments manipulation poses significant challenges in robotics due to the complex, deformable nature of garments and intricate garment relations. 
+            Unlike single-garment manipulation, cluttered scenarios require managing complex garment entanglements and interactions, while maintaining garment cleanliness and manipulation stability. 
+            To address these demands, we propose to learn point-level affordance, the dense representation modeling the complex space and multi-modal manipulation candidates, with novel designs for the awareness of garment geometry, structure, and inter-object relations. 
+            Additionally, we introduce an adaptation module, informed by learned affordance, to reorganize cluttered garments into configurations conducive to manipulation. 
+            Our framework demonstrates effectiveness over environments featuring diverse garment types and pile scenarios in both simulation and the real world.
           </p>
         </div>
       </div>
@@ -296,7 +290,7 @@
         <h2 class="title is-3">Video</h2>
         <hr style="margin-top:0px">
         <div class="publication-video">
-          <iframe src=".\static\videos\ET-SEED_sup_video.mp4"
+          <iframe src=".\static\videos\Introduction.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -306,8 +300,18 @@
       <div class="column is-full-width">
         <h2 class="title is-3"><br>Method</h2>
         <hr style="margin-top:0px">
-        <h3 class="title is-4">Full Pipeline</h3>
-        <img src="./static/images/Pipline_v9.png">
+        <h3 class="title is-4">Pipeline Overview</h3>
+        <img src="./static/images/method_framework.jpg">
+        <p>
+          <b>Framework Overview.</b> Given the observed point cloud, the Affordance Module predicts the initial point-level manipulation (retrieval)  affordance score. When actionability is not good enough, the framework proposes the adaptation pick-place action.
+          It first predicts per-point pick affordance, and selects the pick point with the highest score, conditioned on which it predicts place affordance and selects the place point. After executing adaptation action, it receives a new point cloud and generates new affordance. When actionability is good enough, the robot retrieves on the point with the highest affordance score. 
+          This loop is executed until all garments are retrieved.
+        </p>
+        <h3 class="title is-4">Pipeline Details</h3>
+        <img src="./static/images/method_detail.jpg">
+        <p>
+          <b>Learning Framework of Retrieval, Pick and Place Affordance.</b> Upper-left: the Affordance Module predicts the point-level (retrieval) affordance score for the downstream task. Upper-right: PointNet++ backbone aggregates both local and global features that facilitate incorporating garment geometry, structure and relation information for each point. Lower-right: the Place Module, which predicts the point-level place score conditioned on a pick point for adaptation, is supervised by the trained Affordance Module. Lower-left: the Pick Module, which predicts the point-level place score for adaptation, is supervised by the Place Module.
+        </p>
       </div>
     </div>
   </div>
