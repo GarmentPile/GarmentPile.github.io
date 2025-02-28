@@ -289,7 +289,7 @@
         <h2 class="title is-3">Video</h2>
         <hr style="margin-top:0px">
         <div class="publication-video">
-          <iframe src=".\static\videos\Introduction.mp4"
+          <iframe src="./static/videos/Introduction.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -301,9 +301,13 @@
         <hr style="margin-top:0px">
         <h3 class="title is-4">Pipeline Overview</h3>
         <img src="./static/images/method_framework.jpg">
-        <b>Framework Overview.</b> Given the observed point cloud, the Affordance Module predicts the initial point-level manipulation (retrieval)  affordance score. When actionability is not good enough, the framework proposes the adaptation pick-place action.
-        It first predicts per-point pick affordance, and selects the pick point with the highest score, conditioned on which it predicts place affordance and selects the place point. After executing adaptation action, it receives a new point cloud and generates new affordance. When actionability is good enough, the robot retrieves on the point with the highest affordance score. 
-        This loop is executed until all garments are retrieved.
+        <div class="content has-text-justified">
+          <p>
+            <b>Framework Overview.</b> Given the observed point cloud, the Affordance Module predicts the initial point-level manipulation (retrieval)  affordance score. When actionability is not good enough, the framework proposes the adaptation pick-place action.
+            It first predicts per-point pick affordance, and selects the pick point with the highest score, conditioned on which it predicts place affordance and selects the place point. After executing adaptation action, it receives a new point cloud and generates new affordance. When actionability is good enough, the robot retrieves on the point with the highest affordance score. 
+            This loop is executed until all garments are retrieved.
+          </p>
+        </div>
         <hr style="margin-top:0px">
         <h3 class="title is-4">Pipeline Details</h3>
         <img src="./static/images/method_detail.jpg">
