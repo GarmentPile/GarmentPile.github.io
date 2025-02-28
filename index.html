@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ET-SEED:Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy">
-  <meta name="keywords" content="Robotics Manipulation Equivariance">
+        content="Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation">
+  <meta name="keywords" content="Robotics Manipulation on Garments">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ET-SEED:Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy</title>
+  <title>Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -89,25 +89,22 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy</h1>
+          <h1 class="title is-1 publication-title">Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <!-- <span class="author-block">
               <a href="https://et-seed.github.io">Anonymous Authors<br></a></span> -->
             <span class="author-block">
-              <a href="https://crtie.github.io">Chenrui Tie</a><sup>1,2*</sup>,</span>
+              <a href="https://warshallrho.github.io/">Ruihai Wu</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://yuechen0614.github.io/homepage/">Yue Chen</a><sup>1*</sup>,</span>
+              <a href="https://alwaysleepy.github.io/">Ziyu Zhu</a><sup>2,1*</sup>,</span>
             <span class="author-block">
-              <a href="https://warshallrho.github.io/">Ruihai Wu</a><sup>1*</sup>,
+              <a href="https://garmentpile.github.io/">Yuran Wang</a><sup>1*</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/dongbx0125">Boxuan Dong</a><sup>1</sup>,
+              <a href="https://yuechen0614.github.io/homepage/">Yue Chen</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/1izeyi">Zeyi Li</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://chongkaigao.com/">Chongkai Gao</a><sup>2†</sup>,
+              <a href="https://garmentpile.github.io/">Jiarui Wang</a><sup>3,1</sup>,
             </span>
             <span class="author-block">
               <a href="https://zsdonghao.github.io/">Hao Dong</a><sup>1†</sup>
@@ -115,31 +112,32 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Peking University, </span>
-            <span class="author-block"><sup>2</sup>National University of Singapore, </span>
+            <span class="author-block"><sup>1</sup>CFCS, School of Computer Science, PKU, </span>
+            <span class="author-block"><sup>2</sup>School of EECS, PKU, </span>
+            <span class="author-block"><sup>3</sup>School of Computer Science, SEU, </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><em>International Conference on Learning Representations (ICLR) 2025</em></span>
+            <span class="author-block"><em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2025</em></span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2411.03990"
+                <a href="https://garmentpile.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Paper(Coming Soon)</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2411.03990"
+                <a href="https://garmentpile.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv(Coming Soon)</span>
                 </a>
               </span>
 
@@ -154,12 +152,12 @@
               </span> -->
 
               <span class="link-block">
-                <a href="https://github.com/yuechen0614/ET-SEED"
+                <a href="https://github.com/AlwaySleepy/Garment-Pile"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code(Coming Soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -188,19 +186,20 @@
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
       </video> -->
-      <img src="./static/images/teaser_v14-1.png"/>
+      <img src="./static/images/Teaser.jpg"/>
 <!--       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
         portraits.
       </h2> -->
       <p>
-        ET-SEED is a visual imitation learning algorithm that marries
-        SE(3) equivariant visual representations with diffusion policies. 
-        (a) ET-SEED achieve surprising <b>efficiency</b> and <b>spatial generalization</b> than baselines. 
-        (b) When the input object observation is rotated or translated, 
-        the output action sequence change equivariantly. 
-        (c) Visualizations of simulation environments.
+        <b>Point-Level Affordance for Cluttered Garments.</b> A higher score denotes the higher actionability for downstream retrieval.
+        <b>Row 1</b>: per-point affordance simultaneously reveals 2 garments suitable for retrieval.
+        <b>Row 1</b>: it is aware of garment structures (grasping edges leads other parts contacting floor) and relations (retrieving one garment while dragging nearby entangled garments out), and thus avoids manipulating on points leading to such failures.
+        <b>Row 3 and 4</b>: 
+        highly tangled garments may not have
+        plausible manipulation points,
+        affordance can guide reorganizing the scene, and thus garments plausible for manipulation will exist.
       </p>
     </div>
   </div>
