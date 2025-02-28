@@ -301,16 +301,13 @@
         <hr style="margin-top:0px">
         <h3 class="title is-4">Pipeline Overview</h3>
         <img src="./static/images/method_framework.jpg">
-        <p>
-          <b>Framework Overview.</b> Given the observed point cloud, the Affordance Module predicts the initial point-level manipulation (retrieval)  affordance score. When actionability is not good enough, the framework proposes the adaptation pick-place action.
-          It first predicts per-point pick affordance, and selects the pick point with the highest score, conditioned on which it predicts place affordance and selects the place point. After executing adaptation action, it receives a new point cloud and generates new affordance. When actionability is good enough, the robot retrieves on the point with the highest affordance score. 
-          This loop is executed until all garments are retrieved.
-        </p>
+        <b>Framework Overview.</b> Given the observed point cloud, the Affordance Module predicts the initial point-level manipulation (retrieval)  affordance score. When actionability is not good enough, the framework proposes the adaptation pick-place action.
+        It first predicts per-point pick affordance, and selects the pick point with the highest score, conditioned on which it predicts place affordance and selects the place point. After executing adaptation action, it receives a new point cloud and generates new affordance. When actionability is good enough, the robot retrieves on the point with the highest affordance score. 
+        This loop is executed until all garments are retrieved.
+        <hr style="margin-top:0px">
         <h3 class="title is-4">Pipeline Details</h3>
         <img src="./static/images/method_detail.jpg">
-        <p>
-          <b>Learning Framework of Retrieval, Pick and Place Affordance.</b> Upper-left: the Affordance Module predicts the point-level (retrieval) affordance score for the downstream task. Upper-right: PointNet++ backbone aggregates both local and global features that facilitate incorporating garment geometry, structure and relation information for each point. Lower-right: the Place Module, which predicts the point-level place score conditioned on a pick point for adaptation, is supervised by the trained Affordance Module. Lower-left: the Pick Module, which predicts the point-level place score for adaptation, is supervised by the Place Module.
-        </p>
+        <b>Learning Framework of Retrieval, Pick and Place Affordance.</b> Upper-left: the Affordance Module predicts the point-level (retrieval) affordance score for the downstream task. Upper-right: PointNet++ backbone aggregates both local and global features that facilitate incorporating garment geometry, structure and relation information for each point. Lower-right: the Place Module, which predicts the point-level place score conditioned on a pick point for adaptation, is supervised by the trained Affordance Module. Lower-left: the Pick Module, which predicts the point-level place score for adaptation, is supervised by the Place Module.
       </div>
     </div>
   </div>
