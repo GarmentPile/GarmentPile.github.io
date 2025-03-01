@@ -205,64 +205,6 @@
 </section>
 
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -311,7 +253,15 @@
         <hr style="margin-top:0px">
         <h3 class="title is-4">Pipeline Details</h3>
         <img src="./static/images/method_detail.jpg">
-        <b>Learning Framework of Retrieval, Pick and Place Affordance.</b> Upper-left: the Affordance Module predicts the point-level (retrieval) affordance score for the downstream task. Upper-right: PointNet++ backbone aggregates both local and global features that facilitate incorporating garment geometry, structure and relation information for each point. Lower-right: the Place Module, which predicts the point-level place score conditioned on a pick point for adaptation, is supervised by the trained Affordance Module. Lower-left: the Pick Module, which predicts the point-level place score for adaptation, is supervised by the Place Module.
+        <div class="content has-text-justified">
+          <p>
+            <b>Learning Framework of Retrieval, Pick and Place Affordance.</b> 
+            <b>Upper-left</b>: the Affordance Module predicts the point-level (retrieval) affordance score for the downstream task. 
+            <b>Upper-right</b>: PointNet++ backbone aggregates both local and global features that facilitate incorporating garment geometry, structure and relation information for each point. 
+            <b>Lower-right</b>: the Place Module, which predicts the point-level place score conditioned on a pick point for adaptation, is supervised by the trained Affordance Module. 
+            <b>Lower-left</b>: the Pick Module, which predicts the point-level place score for adaptation, is supervised by the Place Module.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -320,56 +270,41 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <!-- <div class="columns is-centered"> -->
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Matting. -->
-
     <!-- Animation. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
         <hr style="margin-top:0px">
 
-        <p>
-          We evaluate our method on standard robot manipulation tasks in both simulation and real 
-          world settings. The results demonstrate that our approach out performs all baselines in 
-          terms of data efficiency and spatial generalization.
-        </p>
+        <div class="content has-text-justified">
+          <p>
+          We construct 3 different types of representative and realistic scenes built on Omniverse Isaac Sim, 
+          loading 9 categories (dress, onesie, glove, hat, scarf, trousers, underpants, skirt and top) of 126 different garments from ClothesNet into the environment. 
+          Our framework demonstrates effectiveness in both simulation and real world.
+          </p>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <figure>
+              <img src="./static/images/wm.jpg" class="interpolation-image" alt="Simulation 1"/>
+              <figcaption>Washing Machine Scene</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./static/images/sofa.jpg" class="interpolation-image" alt="Simulation 2"/>
+              <figcaption>Sofa Scene</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./static/images/basket.jpg" class="interpolation-image" alt="Simulation 3"/>
+              <figcaption>Basket Scene</figcaption>
+            </figure>
+          </div>
+        </div>
+        
 
         <!-- Interpolating. -->
         <h3 class="title is-4"><br>Simulation Results</h3>
