@@ -326,7 +326,7 @@
               </p>
             </div>
         </div> -->
-        <div class="columns is-centered has-text-centered">
+        <!-- <div class="columns is-centered has-text-centered">
           <div class="column is full width">
             <figure>
               <img src="./static/images/wm_sim.gif"
@@ -335,7 +335,7 @@
               <figcaption>Washing Machine Scene Whole Procedure (Adaptation)</figcaption>
             </figure>
           </div>
-        </div>        
+        </div>         -->
         
 
         <div class="columns is-centered has-text-centered">
@@ -360,18 +360,23 @@
           </div>
         </div>
 
+        <div class="publication-video">
+            <video controls>
+              <source src="./static/videos/wm_sim.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="content has-text-justified">
+              <p>
+              Washing Machine Scene Whole Procedure (Adaptation)
+              </p>
+            </div>
+        </div>
+
         <br/>
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">Real World Results</h3>
-        <!-- <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div> -->
-        <!-- <hr style="margin-top:0px"> -->
 
         <div class="columns is-centered has-text-centered">
           <div class="column">
@@ -388,8 +393,44 @@
           </div>
         </div>
 
-        <div class="container is-max-desktop" style="display: flex;">
-          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+        <div class="publication-video">
+          <video controls>
+            <source src="./static/videos/wm_sim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+            <p>
+            Washing Machine Scene Whole Procedure (Adaptation)
+            </p>
+          </div>
+        </div>
+
+        <div class="publication-video">
+          <video controls>
+            <source src="./static/videos/wm_sim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+            <p>
+            Washing Machine Scene Whole Procedure (Adaptation)
+            </p>
+          </div>
+        </div>
+
+        <div class="publication-video">
+          <video controls>
+            <source src="./static/videos/wm_sim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+            <p>
+            Washing Machine Scene Whole Procedure (Adaptation)
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="container is-max-desktop" style="display: flex;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 33%;">
             <video id="replay-video"
             controls
             preload
@@ -400,7 +441,7 @@
             </video>
             <p class="is-bold"></p>
           </div>
-          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 33%;">
             <video id="replay-video"
             controls
             preload
@@ -411,7 +452,7 @@
             </video>
             <p class="is-bold"></p>
           </div>
-          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
+          <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 33%;">
             <video id="replay-video"
             controls
             preload
@@ -422,106 +463,75 @@
             </video>
             <p class="is-bold"></p>
           </div>
+        </div> -->
+        <h2 class="title is-3">Large Foundation Model Fails to work well on Piled Garments</h2>
+        <hr style="margin-top:0px">
+
+        <h3 class="title is-4"> Segment Anything(SAM2) </h3>
+
+        <div class="content has-text-justified">
+          <p>
+          SAM2 can't perform well mainly because 
+          (1) The piled garments can't be separated perfectly, which leads to the inability to get the appropriate grab points. 
+          (2) With separated area, we can just select the center of the area as grab point, 
+          which means only specific points, instead of all the segmented part, can be considered.
+          </p>
         </div>
-        <!-- <div class="column">
-          <div class="container is-max-desktop" style="display: flex;">
-            <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
-              <video id="replay-video"
-              controls
-              preload
-              playsinline
-              width="100%">
-              <source src="./static/videos/real3.mp4"
-                 type="video/mp4">
-              </video>
-              <p class="is-bold"></p>
-            </div>
-            <div class="hero-body" style="padding-top: 20px; padding-bottom: 20px; width: 50%;">
-              <video id="replay-video"
-              controls
-              preload
-              playsinline
-              width="100%">
-              <source src="./static/videos/real4.mp4"
-                    type="video/mp4">
-              </video>
-              <p class="is-bold"></p>
-            </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <figure>
+              <img src="./static/images/wm_sam2.jpg" class="interpolation-image" alt="SAM 1"/>
+              <figcaption>Washing Machine Result</figcaption>
+            </figure>
           </div>
-        </div> -->
-          <!-- <div class="column">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/real1.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                controls
-                muted
-                preload
-                playsinline
-                width="75%">
-            <source src="./static/videos/real2.mp4"
-                      type="video/mp4">
-          </video>
-          <video id="replay-video"
-                controls
-                muted
-                preload
-                playsinline
-                width="75%">
-            <source src="./static/videos/real3.mp4"
-                      type="video/mp4">
-          </video>
-          <video id="replay-video"
-                controls
-                muted
-                preload
-                playsinline
-                width="75%">
-            <source src="./static/videos/real4.mp4"
-                      type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
+          <div class="column">
+            <figure>
+              <img src="./static/images/sofa_sam2.jpg" class="interpolation-image" alt="SAM 2"/>
+              <figcaption>Sofa Result</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./static/images/basket_sam2.jpg" class="interpolation-image" alt="SAM 3"/>
+              <figcaption>Basket Result</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h3 class="title is-4"> GPT-4o </h3>
+
+        <div class="content has-text-justified">
+          <p>
+          Chatgpt can't judge the stacking relationship of clothes only by rgb and depth images, 
+          so there is only a small chance that it can successfully retrieve garments.
+          </p>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <figure>
+              <img src="./static/images/wm_gpt.jpg" class="interpolation-image" alt="GPT 1"/>
+              <figcaption>Washing Machine Result</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./static/images/sofa_gpt.jpg" class="interpolation-image" alt="GPT 2"/>
+              <figcaption>Sofa Result</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="./static/images/basket_gpt.jpg" class="interpolation-image" alt="GPT 3"/>
+              <figcaption>Basket Result</figcaption>
+            </figure>
+          </div>
+        </div>
 
       </div>
     </div>
     <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Projects</h2>
-        <hr style="margin-top:0px"> -->
-
-        <!-- <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div> -->
-      <!-- </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
 
